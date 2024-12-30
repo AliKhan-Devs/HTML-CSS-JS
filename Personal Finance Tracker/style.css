@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #3b82f6;
+  --secondary-color: #60a5fa;
+  --success-color: #34d399;
+  --danger-color: #ef4444;
+  --background-color: #111827;
+  --card-background: #1f2937;
+  --text-color: #f3f4f6;
+  --text-muted: #9ca3af;
+  --border-color: #374151;
+  --input-background: #374151;
+  --hover-color: #2563eb;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+}
+
+h2 {
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.balance-card {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  border: 1px solid var(--border-color);
+}
+
+#total-balance {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.add-transaction,
+.transactions,
+.charts {
+  background: var(--card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  border: 1px solid var(--border-color);
+}
+
+.charts {
+  grid-column: 1 / -1;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--input-background);
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: var(--hover-color);
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 10px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background-color 0.2s;
+}
+
+.transaction-item:hover {
+  background-color: var(--input-background);
+}
+
+.transaction-item:last-child {
+  border-bottom: none;
+}
+
+.transaction-info {
+  flex-grow: 1;
+}
+
+.transaction-info strong {
+  display: block;
+  color: var(--text-color);
+}
+
+.transaction-info div {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.transaction-info small {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.transaction-amount.income {
+  color: var(--success-color);
+}
+
+.transaction-amount.expense {
+  color: var(--danger-color);
+}
+
+.chart-container {
+  width: 100%;
+  height: 300px;
+  padding: 1rem;
+}
+
+.transactions {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.transactions::-webkit-scrollbar {
+  width: 8px;
+}
+
+.transactions::-webkit-scrollbar-track {
+  background: var(--card-background);
+}
+
+.transactions::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.transactions::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+.transaction-actions{
+  margin-left: 8px;
+}
+.transaction-actions i{
+  margin: 0px 4px;
+}
+.transaction-actions .edit-btn {
+  background-color: none;
+  color: rgb(74, 235, 74);
+  cursor: pointer;
+  
+}
+
+
+.transaction-actions .delete-btn {
+  background-color: none;
+  color: rgb(226, 50, 50);
+  cursor: pointer;
+}

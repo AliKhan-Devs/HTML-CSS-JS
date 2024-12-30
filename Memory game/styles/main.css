@@ -1,0 +1,5 @@
+/* Main stylesheet that imports all modules */
+@import 'base.css';
+@import 'components.css';
+@import 'game-board.css';
+@import 'buttons.css';

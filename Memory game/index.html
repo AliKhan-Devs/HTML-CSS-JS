@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Memory Game</h1>
+        <div class="stats" id="scoreboard">
+            <div class="moves">Moves: <span id="moves">0</span></div>
+            <div class="timer">Time: <span id="time">0</span>s</div>
+        </div>
+        <div class="game-board" id="gameBoard"></div>
+        <button id="resetBtn" class="reset-btn">New Game</button>
+    </div>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

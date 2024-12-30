@@ -1,0 +1,20 @@
+/* Base styles and resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    /* background: linear-gradient(135deg, #1a1c2c, #4a2b7b); */
+    background-image: url('https://cdna.artstation.com/p/assets/images/images/026/667/614/large/natalia-rajs-background.jpg?1589390851');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}

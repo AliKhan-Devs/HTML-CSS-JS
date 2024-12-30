@@ -1,0 +1,50 @@
+/* Game board and card styles */
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+    flex: 1;
+    padding: 0.5rem;
+    align-self: stretch;
+    align-content: center;
+    max-height: 450px; /* Limit maximum height */
+}
+
+.card {
+    aspect-ratio: 1;
+    width: 100%;
+    max-width: 80px; /* Limit maximum width of cards */
+    margin: 0 auto;
+    background: linear-gradient(145deg, #2d3748, #1a202c);
+    border-radius: 0.75rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover:not(.flipped):not(.matched) {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    border-color: rgba(159, 122, 234, 0.4);
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+    background: linear-gradient(145deg, #4a2b7b, #6b46c1);
+    border: 1px solid rgba(159, 122, 234, 0.4);
+}
+
+.card.matched {
+    background: linear-gradient(145deg, #2f855a, #38a169);
+    transform: scale(0.95);
+    cursor: default;
+    border-color: rgba(72, 187, 120, 0.4);
+}
