@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minimal Timer</title>
+    <link rel="stylesheet" href="/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer">
+        <div class="circle"></div>
+        <div class="time">00:00:00</div>
+      </div>
+      <div class="inputs">
+        <div class="input-group">
+          <input type="number" class="hours-input" min="0" max="23" placeholder="00">
+          <span class="input-label">Hours</span>
+        </div>
+        <div class="input-group">
+          <input type="number" class="minutes-input" min="0" max="59" placeholder="00">
+          <span class="input-label">Minutes</span>
+        </div>
+        <div class="input-group">
+          <input type="number" class="seconds-input" min="0" max="59" placeholder="00">
+          <span class="input-label">Seconds</span>
+        </div>
+      </div>
+      <div class="controls">
+        <button class="start">Start</button>
+        <button class="reset" disabled>Reset</button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

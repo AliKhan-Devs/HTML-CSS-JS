@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin:0 ;
+}
+
+/* ======== Align all content at the center of the body */
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://t4.ftcdn.net/jpg/04/26/28/29/360_F_426282929_pVtLAOxysXQS9YS2hTVFFm4OVbCTKztz.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* ======== styling the clock container ======= */
+
+.clock{
+    background-image: url('images.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 280px;
+    height: 280px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* ======= styling the pins of seconds, minuites and hours ========= */
+
+#seconds, #min, #hrs{
+    transform-origin: 0% 100%;
+    position: absolute;
+    border-radius: 10px;
+}
+#seconds{
+    background-color: red;
+    width: 0.5%;
+    height: 17%;
+    top: 25%;
+    left: 49.9%;
+    transform: rotate(0deg);
+}
+#min{
+    background-color: black;
+    width: 0.5%;
+    height: 15%;
+    top: 27.2%;
+    left: 50%;
+}
+#hrs{
+    background-color: blue;
+    width: 0.5%;
+    height: 12%;
+    top: 28.9%;
+    left: 50.4%;
+    /* rotate: 200deg; */
+}
+
+/* ======== style the center of the clock container */
+
+.center{
+    position: absolute;
+    margin: auto;
+    height: 25px;
+    width: 25px;
+    background-color: black;
+    border-radius: 50%;
+    top: 40%;
+    left: 49.29%;
+    z-index: 1;
+}
+
+/* ========= Digital clock container styling =========== */
+
+#digital-clock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    margin: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.digit{
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.digit:hover{
+    transform: scale(1.1);
+}

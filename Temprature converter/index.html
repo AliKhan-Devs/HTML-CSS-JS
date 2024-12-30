@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="/style.css" />
+  <style>
+    /* Hide spinner controls for webkit browsers */
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+    }
+
+    /* Hide spinner controls for Firefox */
+    input[type="number"] {
+      -moz-appearance: textfield;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="background"></div>
+  <div id="app">
+    <div class="converter-container">
+      <h1>Temperature Converter</h1>
+
+      <div class="input-group">
+        <select id="fromUnit" class="unit-select">
+          <option value="celsius">Celsius</option>
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+        <input type="number" id="fromValue" placeholder="Enter value" aria-label="From temperature">
+        <span class="unit" id="fromUnitSymbol">°C</span>
+      </div>
+
+      <button id="swap" class="swap-button">
+        <span class="arrows">⇅</span>
+      </button>
+
+      <div class="input-group">
+        <select id="toUnit" class="unit-select">
+          <option value="fahrenheit">Fahrenheit</option>
+          <option value="celsius">Celsius</option>
+          <option value="kelvin">Kelvin</option>
+        </select>
+        <input type="number" id="toValue" placeholder="Result" aria-label="To temperature" readonly>
+        <span class="unit" id="toUnitSymbol">°F</span>
+      </div>
+
+      <button id="reset" class="reset-button">Reset</button>
+    </div>
+  </div>
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
