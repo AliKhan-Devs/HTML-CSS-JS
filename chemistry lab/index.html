@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Chemistry Laboratory</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div id="head">
+            <h1>Virtual Chemistry Laboratory</h1>
+        </div>
+    </header>
+
+    <main>
+        <section class="chemical-inventory">
+            <h2>Chemical Inventory</h2>
+            <div> <input type="text" id="searchChemicals" placeholder="Search chemicals..."><div/>
+                <div id="chemicalsList" class="chemicals-list"></div>
+        </section>
+
+        <section class="lab-workspace">
+
+            <div id="reactionContainer" class="reaction-container">
+                <div class="reaction-vessel">
+                    <div class="liquid-level"></div>
+                </div>
+            </div>
+
+            <div id="reactionDetails">
+                <p>Drag and drop chemicals to start a reaction</p>
+            </div>
+
+            </div>
+
+        </section>
+
+        <section class="lab-equipment">
+            <h2>Lab Equipment</h2>
+            <div class="equipment-grid">
+                <div class="equipment" draggable="true" data-type="test-tube" id="testTube">Test Tube</div>
+                <div class="equipment" draggable="true" data-type="flask" id="flask">Flask</div>
+                <div class="equipment" draggable="true" data-type="beaker" id="beaker">Beaker</div>
+                <div class="equipment" draggable="true" data-type="burner" id="burner">Bunsen Burner</div>
+                <div class="equipment" draggable="true" data-type="pipette" id="pipette">Pipette</div>
+                <div class="equipment" id="resetBtn">Reset Lab</div>
+                <div class="equipment" id="cleanBtn">Clean Equipment</div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- <section class="reaction-info">
+        <h2>Reaction Information</h2>
+        <div id="reactionDetails">
+            <p>Drag and drop chemicals to start a reaction</p>
+        </div>
+    </section> -->
+
+    <!-- Add type="module" to enable ES modules -->
+    <script type="module" src="chemicals.js"></script>
+    <script type="module" src="reactions.js"></script>
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>

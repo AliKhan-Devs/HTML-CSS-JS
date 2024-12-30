@@ -1,0 +1,80 @@
+:root {
+  --button-size: 65px;
+  --gap-size: 10px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.calculator {
+  background-color: #000;
+  border-radius: 20px;
+  padding: 20px;
+  width: calc((var(--button-size) * 4) + (var(--gap-size) * 3));
+  border: 1.5px solid white;
+  
+}
+.calculator h1{
+  color: white;
+  text-align: center;
+}
+
+.display {
+  color: white;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  /* text-align: right; */
+  margin-bottom: 20px;
+  min-height: 70px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 15px;
+  padding: 0px 10px;
+  overflow-x: auto; /* Add horizontal scrolling */
+   white-space: nowrap;
+
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-size);
+}
+
+button {
+  width: var(--button-size);
+  height: var(--button-size);
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  color: white;
+  background-color: #333;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+button:active {
+  filter: brightness(130%);
+}
+
+.operator {
+  background-color: #ff9f0a;
+}
+
+.special {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.del{
+  font-size: 25px;
+}

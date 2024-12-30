@@ -1,0 +1,60 @@
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    z-index: 2;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.converter-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.amount-container, .currency-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.currency-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.select-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.select-container img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.result {
+    text-align: center;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: #fff;
+}

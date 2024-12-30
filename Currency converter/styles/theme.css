@@ -1,0 +1,35 @@
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #1a1a1a;
+}
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #f0f0f0;
+}
+
+body.light-mode .container {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+body.light-mode h1,
+body.light-mode label {
+    color: #333;
+}
+
+body.light-mode input,
+body.light-mode select,
+body.light-mode .select-container {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
+
+body.light-mode select option {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+body.light-mode .result {
+    background: rgba(0, 0, 0, 0.1);
+    color: #333;
+}
