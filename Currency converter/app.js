@@ -1,4 +1,4 @@
-const API_KEY = 'b409c3a101aea1d6e333dd43';
+const API_KEY = ''; // exchange rate API key here for real time conversion
 const BASE_URL = 'https://v6.exchangerate-api.com/v6';
 
 // DOM Elements
